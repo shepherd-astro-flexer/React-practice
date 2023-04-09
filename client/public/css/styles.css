@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+body {
+  margin: 0 80px;
+  height: 300vh;
+}
+
+body, p, a, ::placeholder {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  border-bottom: 1px solid lightgray;
+  
+}
+/* left section */
+.logo {
+  width: 110px;
+  margin-right: 20px;
+}
+
+.header-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 470px;
+}
+
+.anchor-container {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  border-bottom: 4px solid transparent;
+  transition: all 0.15s;
+}
+
+.anchor-container:hover {
+  border-bottom: 4px solid orange;
+}
+
+.header-anchor {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* right section */
+.header-right-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.header-cart-icon {
+  filter: invert(72%) sepia(0%) saturate(1127%) hue-rotate(226deg) brightness(96%) contrast(85%);
+  width: 18px;
+}
+
+.image-avatar {
+  width: 40px;
+}
+
+/* Left section */
+
+.left-section {
+  width: 380px;
+}
+
+.image-product {
+  width: inherit;
+  border-radius: 12px;
+}
+
+.thumbnail-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-product-thumbnail {
+  width: 80px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.image-product-thumbnail:hover {
+  border: 3px solid orange;
+}
