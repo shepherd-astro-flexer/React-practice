@@ -85,8 +85,78 @@ header {
   width: 80px;
   border: 3px solid transparent;
   border-radius: 10px;
+  transition: all 0.15s;
 }
 
 .image-product-thumbnail:hover {
   border: 3px solid orange;
+  opacity: 0.5;
 }
+
+/* right section */
+.right-section {
+  width: 360px;
+}
+
+.company-text {
+  color: orange;
+  letter-spacing: 1px;
+}
+
+.title-text {
+  font-size: 2.2rem;
+}
+
+.body-text {
+  font-size: 0.82rem;
+  color: rgb(98, 94, 94);
+  line-height: 20px;
+}
+
+.current-price-container {
+  display: flex;
+  align-items: center;
+}
+
+.current-price {
+  margin-right: 12px;
+}
+
+.price-off {
+  color: orange;
+  padding: 4px 8px;
+  background-color: rgb(255, 245, 228);
+  border-radius: 4px;
+}
+
+.original-price {
+  color: rgb(185, 183, 183);
+  text-decoration: line-through ;
+}
+
+.spinner-container {
+  display: flex;
+  background-color: rgb(243, 246, 248);
+}
+
+.add-to-cart-button {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 128, 0);
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 0 65px;
+  box-shadow: 4px 8px 16px rgba(255, 128, 0, 0.495);
+}
+
+.add-to-cart-icon {
+  width: 14px;
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(214deg) brightness(106%) contrast(101%);
+}
+
+.add-to-cart-text {
+  font-weight: bold;
+}
+
+
