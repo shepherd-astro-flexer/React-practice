@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   height: 90px;
   border-bottom: 1px solid lightgray;
-  
+  margin-bottom: 50px;
 }
 /* left section */
 .logo {
@@ -91,20 +91,24 @@ header {
 .image-product-thumbnail:hover {
   border: 3px solid orange;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 /* right section */
 .right-section {
   width: 360px;
+  padding-top: 70px;
 }
 
 .company-text {
   color: orange;
   letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .title-text {
   font-size: 2.2rem;
+  margin-bottom: 25px;
 }
 
 .body-text {
@@ -116,6 +120,7 @@ header {
 .current-price-container {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .current-price {
@@ -131,12 +136,15 @@ header {
 
 .original-price {
   color: rgb(185, 183, 183);
-  text-decoration: line-through ;
+  text-decoration: line-through;
+  margin-bottom: 30px;
 }
 
 .spinner-container {
   display: flex;
   background-color: rgb(243, 246, 248);
+  border-radius: 6px;
+  margin-right: 10px;
 }
 
 .add-to-cart-button {
@@ -146,17 +154,58 @@ header {
   color: white;
   border-radius: 6px;
   border: none;
-  padding: 0 65px;
+  padding: 15px 60px;
   box-shadow: 4px 8px 16px rgba(255, 128, 0, 0.495);
 }
 
 .add-to-cart-icon {
   width: 14px;
   filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(214deg) brightness(106%) contrast(101%);
+  margin-right: 10px;
 }
 
 .add-to-cart-text {
   font-weight: bold;
 }
 
+.spinner-and-add-cart-container {
+  display: flex;
+}
 
+.spinner-and-add-cart-container p, h1, h2, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spinner-button-1, .spinner-button-2 {
+  font-size: 1.2rem;
+  color: orange;
+}
+
+.spinner-button-1 {
+  border-radius: 6px 0 0 6px;
+}
+
+.spinner-button-2 {
+  border-radius: 0 6px 6px 0;
+}
+
+.counter {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-price {
+  background-color: rgb(243, 246, 248);
+  border: none;
+  width: 40px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
