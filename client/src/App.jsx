@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Header />;
-      <Main counter={productCounter} pickedImg={pickedThumbnail} />
+      <Main counter={productCounter} pickedImg={pickedThumbnail} />;
     </div>
   );
 }

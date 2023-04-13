@@ -209,3 +209,38 @@ header {
   display: flex;
   justify-content: space-around;
 }
+
+/* Modal */
+.modal {
+  background-color: rgba(0, 0, 0, 0.747);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image-product {
+  width: 450px;
+  border-radius: 15px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.modal-thumbnail-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-close-container {
+  text-align: end;
+}
