@@ -244,3 +244,12 @@ header {
 .modal-close-container {
   text-align: end;
 }
+
+.next, .previous {
+}
+
+.sample-div {
+  width: 100px;
+  height: 100px;
+
+}

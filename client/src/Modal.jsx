@@ -5,7 +5,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
-const Modal = ({ pickedImg, counter, close }) => {
+const Modal = ({ pickedImg, counter, close, navigation }) => {
+  const navigate = (e) => {
+    const name = e.currentTarget.name; // ! Used currentTarget instead of target when accessing the name
+    navigation(name);
+  }
   
   const buttonStyle = {
     position: "absolute",
@@ -23,20 +27,19 @@ const Modal = ({ pickedImg, counter, close }) => {
         </div>
         <div className="modal-body">
           <img name="main" className="modal-image-product" src={`../images/image-product-${counter}.jpg`} alt="shoes" />
-          <Fab size="medium"  style={{...buttonStyle, left: -25}}>
-            <KeyboardArrowLeftIcon fontSize="medium"  />
+          <Fab name="previous" onClick={navigate} style={{...buttonStyle, left: -25}} size="medium">
+            <KeyboardArrowLeftIcon fontSize="medium" />
           </Fab>
-          <Fab size="medium"  style={{...buttonStyle, right: -25}}>
-            <KeyboardArrowRightIcon fontSize="medium"  />
+          <Fab name="next" onClick={navigate} style={{...buttonStyle, right: -25}} size="medium">
+            <KeyboardArrowRightIcon fontSize="medium" />
           </Fab>
         </div>
-        
       </div>
       <div className="modal-thumbnail-container">
-        <Thumbnail click={pickedImg} num="1" />
-        <Thumbnail click={pickedImg} num="2" />
-        <Thumbnail click={pickedImg} num="3" />
-        <Thumbnail click={pickedImg} num="4" />
+        <Thumbnail click={pickedImg} num={1} />
+        <Thumbnail click={pickedImg} num={2} />
+        <Thumbnail click={pickedImg} num={3} />
+        <Thumbnail click={pickedImg} num={4} />
       </div>
     </div>
   )

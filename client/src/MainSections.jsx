@@ -2,26 +2,36 @@ import React, { useState } from "react";
 import Thumbnail from "./Thumbnail";
 import Modal from "./Modal";
 
-const LeftSection = ({ pickedImg, counter}) => {
+const LeftSection = () => {
   const [modal, setModal] = useState(false);
+  const [productCounter, setProductCounter] = useState(1);
 
-  const closeModal = () => {
-    setModal(false);
+  const pickedThumbnail = (num) => {
+    setProductCounter(num) // ! Forgot to change the value to a number on the 'modal' component We set the 'num' variable to be a number because it returns a string value of a number, and that is what's causing the crash, so need to be AWARE of that.
+  };
+  
+  const closeModal = () => (setModal(false));
+
+  const navigateButton = (name) => {
+    setProductCounter(() => {
+      if (name === "next") return productCounter < 4 ? productCounter + 1 : productCounter;
+      return productCounter > 1 ? productCounter - 1 : productCounter;
+    })
   }
-
+  
   return (
     <div className="left-section">
       <img onClick={() => {
         setModal(true);
-      }} name="main" className="image-product" src={`../images/image-product-${counter}.jpg`} alt="shoes" />
+      }} name="main" className="image-product" src={`../images/image-product-${productCounter}.jpg`} alt="shoes" />
       {modal && <div className="modal">
-        <Modal close={closeModal} pickedImg={pickedImg} counter={counter} />
+        <Modal navigation={navigateButton} close={closeModal} pickedImg={pickedThumbnail} counter={productCounter} />
       </div>}
       <div className="thumbnail-container">
-        <Thumbnail click={pickedImg} num="1" />
-        <Thumbnail click={pickedImg} num="2" />
-        <Thumbnail click={pickedImg} num="3" />
-        <Thumbnail click={pickedImg} num="4" />
+        <Thumbnail click={pickedThumbnail} num={1} />
+        <Thumbnail click={pickedThumbnail} num={2} />
+        <Thumbnail click={pickedThumbnail} num={3} />
+        <Thumbnail click={pickedThumbnail} num={4} />
       </div>
     </div>
   )

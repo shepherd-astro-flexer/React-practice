@@ -3,16 +3,10 @@ import Header from "./Header";
 import Main from "./Main";
 
 function App() {
-  const [productCounter, setProductCounter] = useState(1);
-
-  const pickedThumbnail = (num) => {
-    setProductCounter(num);
-  }
-  
   return (
     <div>
       <Header />;
-      <Main counter={productCounter} pickedImg={pickedThumbnail} />;
+      <Main />;
     </div>
   );
 }
