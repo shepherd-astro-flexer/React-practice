@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeaderAnchor from "./HeaderAnchor";
 
 const Header = () => {
+  const [cart, setCart] = useState(false);
 
   return (
     <header>

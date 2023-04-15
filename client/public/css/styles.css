@@ -212,15 +212,8 @@ header {
 
 /* Modal */
 .modal {
-  background-color: rgba(0, 0, 0, 0.747);
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  
 }
 
 .modal-image-product {
@@ -245,11 +238,7 @@ header {
   text-align: end;
 }
 
-.next, .previous {
-}
-
-.sample-div {
-  width: 100px;
-  height: 100px;
-
+.cart-container {
+  width: 200px;
+  height: 30px;
 }
