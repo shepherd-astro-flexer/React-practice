@@ -5,7 +5,7 @@ body {
   height: 300vh;
 }
 
-body, p, a, ::placeholder {
+body, p, a, ::placeholder, button {
   font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -58,6 +58,10 @@ header {
 .header-cart-icon {
   filter: invert(72%) sepia(0%) saturate(1127%) hue-rotate(226deg) brightness(96%) contrast(85%);
   width: 18px;
+}
+
+.header-cart-icon:hover {
+  cursor: pointer;
 }
 
 .image-avatar {
@@ -212,8 +216,6 @@ header {
 
 /* Modal */
 .modal {
-  
-  
 }
 
 .modal-image-product {
@@ -238,7 +240,100 @@ header {
   text-align: end;
 }
 
+.cart {
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  background-color: rgb(255, 249, 249);
+  position: absolute;
+  top: 40px;
+  border-radius: 6px;
+  box-shadow: 2px 8px 16px rgba(114, 113, 113, 0.496);
+  display: flex;
+  flex-direction: column;
+}
+
 .cart-container {
-  width: 200px;
-  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cart-text {
+  box-sizing: border-box;
+  width: inherit;
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(155, 148, 148, 0.456);
+}
+
+.cart-body {
+  overflow: hidden;
+  overflow-y: auto; /* ! so that the scroll will only appear */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.checkout-button {
+  margin: 0 20px 25px;
+  background-color: rgb(255, 128, 0);
+  font-weight: 700;
+  border: none;
+  color: white;
+  font-size: 0.75rem;
+  padding: 15px 0;
+  border-radius: 6px;
+}
+
+/* render cart */
+.render-cart p, strong{
+  color: rgb(90, 89, 89);
+  font-size: 0.85rem;
+}
+
+.render-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+}
+
+.cart-prices {
+  line-height: 10px
+}
+
+.item-image {
+  width: 40px;
+  border-radius: 3px;
+}
+
+.item-total {
+  color: black;
+}
+
+.item-delete {
+  width: 12px;
+  transition: all 0.15s;
+}
+
+.item-delete:hover {
+  filter: invert(82%) sepia(0%) saturate(15%) hue-rotate(202deg) brightness(99%) contrast(105%);
+  cursor: pointer;
+}
+
+.empty-text {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgb(109, 101, 101);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }

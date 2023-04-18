@@ -15,7 +15,7 @@ const MyModal = ({ pickedImg, counter, close, navigation, modal }) => {
   const buttonStyle = {
     position: "absolute",
   }
-  // ! Modal only takes 1 component
+  // ! Modal mui only takes 1 container
   return (
     <Modal style={{display: "flex", alignItems: "center", justifyContent: "center"}} disableEnforceFocus={true} onClose={close} open={modal}> 
     <div>

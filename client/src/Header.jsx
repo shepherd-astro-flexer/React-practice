@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import HeaderAnchor from "./HeaderAnchor";
+import Cart from "./Cart";
 
-const Header = () => {
-  const [cart, setCart] = useState(false);
-
+const Header = ({ product, deleteCart, badgeCount, setBadgeCount }) => {
   return (
     <header>
         <div className="header-left-section">
@@ -15,7 +14,7 @@ const Header = () => {
           <HeaderAnchor value="Contact" />
         </div>
         <div className="header-right-section">
-          <img className="header-cart-icon" src="../images/icon-cart.svg" />
+          <Cart setBadgeCount={setBadgeCount} badgeCount={badgeCount} deleteCart={deleteCart} product={product} />
           <img className="image-avatar" src="../images/image-avatar.png" />
         </div>
     </header>
